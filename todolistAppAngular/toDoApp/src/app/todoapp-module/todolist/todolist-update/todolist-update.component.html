@@ -1,0 +1,70 @@
+<hr>
+<hr>
+<hr>
+<hr>
+  <div class="container">
+    <div class="row">
+        <div class="col col-md-5">
+            <div class="card h-100">
+                <div class="card-body" >
+                    
+                    <div class="text-center">
+                      <h2>ToDoList</h2>
+                      <hr>
+                        <label for="name"><strong>Name </strong></label>
+                      <br>
+                        <label>{{ todoList.name }}</label>
+                        <br>
+
+                        <label for="CreationDate"><strong>Creation Date &nbsp; </strong></label>
+                        <a [routerLink]="['update-item','creationDate']">
+                          <i class="fa fa-pencil"></i>
+                      </a>
+                      <br>
+                        <label>{{ todoList.creationDate }}</label>
+
+                        <br>
+                        <label for="Reminder"><strong>Reminder Date &nbsp; </strong></label>
+                        <a [routerLink]="['update-item','reminderDate']">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                        <br>
+                        <label>{{ todoList.reminderDate }}</label>
+                        <br>
+                        <label for="Categorie"><strong>Categorie &nbsp; </strong></label>
+                        <a [routerLink]="['update-item','categorie']">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                        <br>
+                        <label>{{ todoList.categorie }}</label>
+                        <br>
+                        <label for="Status"><strong>Status &nbsp; </strong></label>
+                        <a [routerLink]="['update-item','status']">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                        <br>
+                        <label>{{ todoList.status }}</label>
+
+                        <br>
+                        <label for="isPublic"><strong>Public &nbsp; </strong></label>
+                        <a [routerLink]="['update-item','isPublic']">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                        <br>
+                        <label>{{ todoList.isPublic }}</label>
+
+                        <br>
+                        <button class='btn btn-outline-secondary' (click)='cancelUpdate()'>Back</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-5">
+                <router-outlet></router-outlet>
+            </div>
+    </div>
+</div>
+
+
+

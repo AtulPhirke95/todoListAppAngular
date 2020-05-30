@@ -1,0 +1,41 @@
+
+<header class="site-header">
+    <nav class="navbar fixed-top navbar-expand-sm bg-secondary navbar-dark ">
+      <div class="container">
+        <a class="navbar-brand mr-4" [routerLink]="['/todolist']">ToDo App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          
+          <div class="navbar-nav mr-auto" *ngIf="!currentLogedInUserFlag;else appPage">
+              <a class="nav-item nav-link" [routerLink]="['/login-user']">Login</a>
+              <a class="nav-item nav-link" [routerLink]="['/register-user']">Register</a>
+          </div>
+          <ng-template #appPage>
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" [routerLink]="['/todolist']">ToDoList</a>
+                <a class="nav-item nav-link" [routerLink]="['/user-profile']">Profile</a>
+                <a class="nav-item nav-link" [routerLink]="['/logout-user']">logout</a>
+          </div>
+          </ng-template>
+          <!--
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" [routerLink]="['/login-user']">Login</a>
+            <a class="nav-item nav-link" [routerLink]="['/register-user']">Register</a>
+            <a class="nav-item nav-link" [routerLink]="['/todolist']">ToDoList</a>
+            <a class="nav-item nav-link" [routerLink]="['/user-profile']">Profile</a>
+            <a class="nav-item nav-link" [routerLink]="['/logout-user']">logout</a>
+        </div>
+        -->
+          <!-- Navbar Right Side -->
+          <div class="navbar-nav">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+    <router-outlet></router-outlet>
+  
